@@ -31,3 +31,6 @@ ALTER TABLE  product
 ADD PRIMARY KEY (id);
 
 DESC product;
+SELECT * FROM product WHERE quantity = 0;
+SELECT * FROM product WHERE quantity = 100;
+SELECT * FROM product WHERE price = 15000;
