@@ -70,3 +70,21 @@ SELECT  p.id AS kode ,
         p.quantity AS stock,
         p.description AS keterangan
 FROM product AS p;
+
+SELECT  * FROM  product WHERE quantity >100;
+
+SELECT  * FROM  product WHERE  quantity >= 100;
+
+SELECT  * FROM  product WHERE  product.category !='Makanan';
+
+SELECT  * FROM  product WHERE product.category <> 'Makanan';
+
+SELECT  * FROM  product WHERE  quantity >= 100 AND  price < 15000;
+
+SELECT  * FROM  product WHERE  quantity <= 70 OR  price < 15000;
+
+SELECT * FROM  product WHERE name LIKE  'Mie%';
+
+SELECT  * FROM  product WHERE price BETWEEN 9000 AND 15000;
+
+SELECT  * FROM  product WHERE price NOT BETWEEN 9000 AND 15000;
