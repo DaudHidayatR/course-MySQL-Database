@@ -26,3 +26,8 @@ SELECT * FROM product;
 SELECT id, name,price, quantity FROM  product;
 
 SELECT name,quantity,id FROM  product;
+
+ALTER TABLE  product
+ADD PRIMARY KEY (id);
+
+DESC product;
