@@ -54,3 +54,5 @@ UPDATE  product
 SET  description = 'Bakso Ukuran Jumbo'
 WHERE id = 'P011';
 SELECT * FROM product;
+
+DELETE FROM product where id = 'P009';
