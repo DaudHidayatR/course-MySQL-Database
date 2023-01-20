@@ -34,3 +34,23 @@ DESC product;
 SELECT * FROM product WHERE quantity = 0;
 SELECT * FROM product WHERE quantity = 100;
 SELECT * FROM product WHERE price = 15000;
+
+alter table product
+ADD COLUMN  category ENUM('Makanan', 'Minuman', 'Lain-lain')
+AFTER  name;
+SELECT  * FROM product;
+
+UPDATE  product
+SET  ``.product.category = 'Makanan'
+WHERE id = 'P001';
+
+UPDATE  product
+SET  ``.product.category = 'Makanan',
+     description = 'mie yamin enak'
+WHERE id = 'P008';
+
+
+UPDATE  product
+SET  description = 'Bakso Ukuran Jumbo'
+WHERE id = 'P011';
+SELECT * FROM product;
