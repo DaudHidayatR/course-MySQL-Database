@@ -88,3 +88,5 @@ SELECT * FROM  product WHERE name LIKE  'Mie%';
 SELECT  * FROM  product WHERE price BETWEEN 9000 AND 15000;
 
 SELECT  * FROM  product WHERE price NOT BETWEEN 9000 AND 15000;
+
+SELECT * FROM  product ORDER BY price DESC , quantity;
