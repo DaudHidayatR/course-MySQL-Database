@@ -22,3 +22,7 @@ values ('P009','Bakso Dower','Bakso jumbo pedas',11000,50),
        ('P010', 'Bakso Dower lava','Bakso Jumbo++ pedas', 18000,750),
        ('P011','Bakso Iga','Bakso x Iga', 20000,40);
 SELECT * FROM product;
+
+SELECT id, name,price, quantity FROM  product;
+
+SELECT name,quantity,id FROM  product;
