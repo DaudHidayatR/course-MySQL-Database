@@ -56,3 +56,17 @@ WHERE id = 'P011';
 SELECT * FROM product;
 
 DELETE FROM product where id = 'P009';
+
+SELECT  id AS kode ,
+        name AS nama,
+        price AS harga,
+        quantity AS stock,
+        description AS keterangan
+FROM product;
+
+SELECT  p.id AS kode ,
+        p.name AS nama,
+        p.price AS harga,
+        p.quantity AS stock,
+        p.description AS keterangan
+FROM product AS p;
