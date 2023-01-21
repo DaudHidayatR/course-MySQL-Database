@@ -96,3 +96,5 @@ FROM  product
 WHERE  price> 0
 ORDER BY price
 limit 4;
+
+SELECT distinct category FROM product;
