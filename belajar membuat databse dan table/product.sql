@@ -104,3 +104,6 @@ SELECT  id, name, price DIV 1000 AS 'price in k' FROM product;
 SELECT  id , cos(price), sin(price), tan(price) FROM product;
 
 SELECT  id, name, price AS 'price in k' FROM product WHERE price DIV 1000 >15;
+
+
+
