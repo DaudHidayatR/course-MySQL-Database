@@ -47,3 +47,13 @@ SELECT  id,
 FROM product;
 
 SELECT  id, name, IFNULL(description, 'kosong')as 'description' FROM product;
+
+SELECT  COUNT(id) as 'Total product' FROM product;
+
+SELECT  MAX(price) as 'Termahal product' FROM product;
+
+SELECT  MIN(price) as 'Termurah product' FROM product;
+
+SELECT  AVG(price) as 'Rata-rata product' FROM product;
+
+SELECT  SUM(price) as 'Jumlah harga product' FROM product;
