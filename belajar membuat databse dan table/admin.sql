@@ -26,3 +26,9 @@ SELECT id , LOWER(name) as 'Name lower',LENGTH(name) as 'Name length' FROM produ
 
 SELECT id , UPPER(name) as 'Name lower',LENGTH(name) as 'Name length' FROM product;
 
+SELECT  id, created_at,
+        EXTRACT(YEAR  FROM  created_at)as 'Year',
+        EXTRACT(MONTH FROM  created_at)as 'Month'
+FROM product;
+
+SELECT  id, created_at, YEAR(created_at), MONTH(created_at) FROM product;
