@@ -21,3 +21,8 @@ INSERT INTO admin(first_name, last_name)
 VALUES ('kharisma', 'suci');
 
 SELECT LAST_INSERT_ID();
+
+SELECT id , LOWER(name) as 'Name lower',LENGTH(name) as 'Name length' FROM product;
+
+SELECT id , UPPER(name) as 'Name lower',LENGTH(name) as 'Name length' FROM product;
+
