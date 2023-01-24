@@ -57,3 +57,16 @@ SELECT  MIN(price) as 'Termurah product' FROM product;
 SELECT  AVG(price) as 'Rata-rata product' FROM product;
 
 SELECT  SUM(price) as 'Jumlah harga product' FROM product;
+
+
+SELECT  COUNT(id) as 'Total product', category FROM product GROUP BY category;
+
+SELECT  MAX(price) as 'Termahal product',category FROM product GROUP BY category;
+
+SELECT  MIN(price) as 'Termurah product', category FROM product GROUP BY category;
+
+SELECT  AVG(price) as 'Rata-rata product', category FROM product GROUP BY category;
+
+SELECT  SUM(price) as 'Jumlah harga product', category FROM product GROUP BY category;
+
+SELECT  COUNT(id) as 'Total', category FROM product GROUP BY category HAVING Total >5;
