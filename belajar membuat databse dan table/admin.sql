@@ -32,3 +32,18 @@ SELECT  id, created_at,
 FROM product;
 
 SELECT  id, created_at, YEAR(created_at), MONTH(created_at) FROM product;
+
+SELECT  id,
+        CASE category
+            WHEN 'Makanan' THEN  'Enak'
+            WHEN 'Minuman' THEN 'Segar'
+            ElSE 'apa itu?'
+            END AS 'Category'
+FROM product;
+
+SELECT  id,
+        price,
+        IF(price <= 15000, 'Murah', IF(price <= 20000, 'Mahal', 'Mahal banget')) as 'Mahal?'
+FROM product;
+
+SELECT  id, name, IFNULL(description, 'kosong')as 'description' FROM product;
