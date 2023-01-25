@@ -106,4 +106,14 @@ SELECT  id , cos(price), sin(price), tan(price) FROM product;
 SELECT  id, name, price AS 'price in k' FROM product WHERE price DIV 1000 >15;
 
 
+ALTER  table  product
+ADD FULLTEXT  product_fulltext(name, description);
 
+SELECT * FROM product
+WHERE  MATCH(name, description) AGAINST('ayam' IN NATURAL  LANGUAGE  MODE );
+
+SELECT * FROM product
+WHERE  MATCH(name, description) AGAINST('+ayam -bakso' IN BOOLEAN MODE );
+
+SELECT * FROM product
+WHERE  MATCH(name, description) AGAINST('bakso' WITH QUERY EXPANSION );
