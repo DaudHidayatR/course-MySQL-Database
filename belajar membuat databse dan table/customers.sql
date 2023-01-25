@@ -26,6 +26,6 @@ update  product
 SET quantity = 1000 WHERE id = 'P015';
 
 ALTER TABLE product
-ADD  CONSTRAINT  price_check CHECK ( price >=1000 );
+ADD CONSTRAINT  price_check CHECK ( price >=1000 );
 
 SHOW create table product;
