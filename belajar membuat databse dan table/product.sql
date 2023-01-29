@@ -120,3 +120,31 @@ WHERE  MATCH(name, description) AGAINST('bakso' WITH QUERY EXPANSION );
 
 INSERT INTO product(id, name,description, price, quantity)
 values ('Pxxx','Contoh','lain-lain',15000,100);
+
+ALTER TABLE product
+    DROP  column category;
+
+ALTER TABLE product
+ADD COLUMN id_category VARCHAR(10);
+
+
+ALTER TABLE product
+ADD CONSTRAINT fk_product_category
+FOREIGN KEY (id_category) REFERENCES category(id);
+
+SELECT * FROM product;
+
+INSERT INTO category(id, name)
+VALUES ('C001', 'Makanan'),
+       ('C002', 'Minuman'),
+       ('C003', 'Lain-lain');
+
+SELECT  * FROM category;
+
+UPDATE  product
+SET  id_category = 'C001'
+WHERE id IN ('P001','P002','P003','P004','P005','P006');
+
+SELECT  product.id, product.name, category.name
+FROM product
+JOIN category on product.id_category = category.id;
