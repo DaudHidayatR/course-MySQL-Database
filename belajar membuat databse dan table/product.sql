@@ -148,3 +148,5 @@ WHERE id IN ('P001','P002','P003','P004','P005','P006');
 SELECT  product.id, product.name, category.name
 FROM product
 JOIN category on product.id_category = category.id;
+
+SELECT * FROM product;
