@@ -48,3 +48,4 @@ JOIN  product ON product.id = orders_detail.id_product;
 SELECT  orders.id, product.id,product.name, orders_detail.quantity, orders_detail.price FROM orders
 JOIN orders_detail ON  orders_detail.id_order = orders.id
 JOIN  product ON product.id = orders_detail.id_product;
+

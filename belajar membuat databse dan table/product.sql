@@ -150,3 +150,30 @@ FROM product
 JOIN category on product.id_category = category.id;
 
 SELECT * FROM product;
+
+INSERT INTO product(id, name, price,quantity)
+values ('X001','Test 1',11000,50),
+       ('X002','Test 2',18000,750),
+       ('X003','Test 3',20000,40);
+SELECT * FROM product;
+
+SELECT  * FROM  category
+INNER JOIN product ON (product.id_category = category.id);
+
+SELECT  * FROM  category
+LEFT JOIN product ON (product.id_category = category.id);
+
+SELECT  * FROM  category
+RIGHT JOIN product ON (product.id_category = category.id);
+
+SELECT  * FROM  category
+CROSS JOIN product;
+
+CREATE TABLE numbers(
+    id INT NOT NULL ,
+    PRIMARY KEY (id)
+)ENGINE  =InnoDB;
+
+INSERT INTO numbers(id) VALUES (6),(7);
+
+SELECT number1.id , numbers2.id , (numbers2.id * number1.id) FROM  numbers as number1 CROSS JOIN numbers as numbers2 ORDER BY  number1.id , numbers2.id;
