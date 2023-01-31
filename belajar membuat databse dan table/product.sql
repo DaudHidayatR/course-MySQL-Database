@@ -176,4 +176,16 @@ CREATE TABLE numbers(
 
 INSERT INTO numbers(id) VALUES (6),(7);
 
-SELECT number1.id , numbers2.id , (numbers2.id * number1.id) FROM  numbers as number1 CROSS JOIN numbers as numbers2 ORDER BY  number1.id , numbers2.id;
+SELECT number1.id , numbers2.id , (numbers2.id * number1.id)
+FROM  numbers as number1 CROSS JOIN numbers as numbers2
+ORDER BY  number1.id , numbers2.id;
+
+SELECT *
+FROM product
+WHERE price > (SELECT AVG(price) FROM product);
+
+SELECT MAX(cp.price) FROM  (SELECT  price FROM  category
+JOIN  product p on (category.id = p.id_category)) as cp;
+
+SELECT * FROM product;
+
