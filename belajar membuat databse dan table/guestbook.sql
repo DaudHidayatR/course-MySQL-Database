@@ -55,3 +55,4 @@ START TRANSACTION ;
 
 SELECT * FROM guestbook;
 ROLLBACK ;
+
