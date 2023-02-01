@@ -37,6 +37,21 @@ INNER JOIN  guestbook ON guestbook.email = customers.email;
 
 SELECT DISTINCT customers.email FROM customers
 LEFT JOIN guestbook g on customers.email = g.email
-WHERE  g.email IS NULL ;
+WHERE  g.email IS NULL;
+
+START TRANSACTION ;
+
+INSERT INTO  guestbook (email, title, content)
+VALUES ('contoh@gmail.com', 'contoh', 'contoh'),
+       ('contoh2@gmail.com', 'contoh', 'contoh'),
+       ('contoh3@gmail.com', 'contoh', 'contoh');
+SELECT * FROM guestbook;
+COMMIT ;
 
 
+SELECT * FROM guestbook;
+
+START TRANSACTION ;
+
+SELECT * FROM guestbook;
+ROLLBACK ;
